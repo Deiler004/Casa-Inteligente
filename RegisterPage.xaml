@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Casa_Inteligente.RegisterPage"
+             Title="Registro">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <!-- Título de la página -->
+            <Label
+                Text="Crear Cuenta"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- Campo de Correo Electrónico -->
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Correo Electrónico"
+                HorizontalOptions="Fill" />
+
+            <!-- Botón para Enviar Código de Verificación -->
+            <Button
+                x:Name="SendVerificationCodeButton"
+                Text="Enviar Código de Verificación"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnSendVerificationCodeButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Campo para Introducir el Código de Verificación -->
+            <Entry
+                x:Name="VerificationCodeEntry"
+                Placeholder="Código de Verificación"
+                HorizontalOptions="Fill"
+                IsVisible="False" />
+
+            <!-- Botón para Verificar el Código de Verificación -->
+            <Button
+                x:Name="VerifyCodeButton"
+                Text="Verificar Código"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnVerifyCodeButtonClicked"
+                HorizontalOptions="Fill"
+                IsVisible="False" />
+
+            <!-- Campo de Nombre de Usuario -->
+            <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Nombre de Usuario"
+                HorizontalOptions="Fill" />
+
+            <!-- Campo de Contraseña -->
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Contraseña"
+                IsPassword="True"
+                HorizontalOptions="Fill" />
+
+            <!-- Campo para Confirmar Contraseña -->
+            <Entry
+                x:Name="ConfirmPasswordEntry"
+                Placeholder="Confirmar Contraseña"
+                IsPassword="True"
+                HorizontalOptions="Fill" />
+
+            <!-- Botón de Registro -->
+            <Button
+                x:Name="RegisterButton"
+                Text="Registrarse"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnRegisterButtonClicked"
+                HorizontalOptions="Fill"
+                IsVisible="False" />
+
+            <!-- Enlace para volver a la página de inicio de sesión -->
+            <Label
+                Text="¿Ya tienes una cuenta? Iniciar Sesión"
+                TextColor="#007AFF"
+                HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLoginPageTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Casa_Inteligente.MainPage"
+             Title="Inicio de Sesión">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <!-- Título de la página -->
+            <Label
+                Text="Iniciar Sesión"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- Campo de Nombre de Usuario -->
+            <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Nombre de Usuario"
+                HorizontalOptions="Fill" />
+
+            <!-- Campo de Contraseña -->
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Contraseña"
+                IsPassword="True"
+                HorizontalOptions="Fill" />
+
+            <!-- Botón de Inicio de Sesión -->
+            <Button
+                Text="Iniciar Sesión"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnLoginButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Enlace para ir a la página de registro -->
+            <Label
+                Text="¿No tienes una cuenta? Crear una"
+                TextColor="#007AFF"
+                HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCreateAccountButtonClicked" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!-- Enlace para ir a la pagina de recuperar contraseña -->
+            <Label
+                Text="¿Olvidaste tu contraseña?"
+                TextColor="#007AFF"
+                HorizontalOptions="Center"> 
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRecoverPasswordButtonClicked" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
